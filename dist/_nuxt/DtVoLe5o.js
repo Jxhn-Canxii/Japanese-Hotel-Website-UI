@@ -1,0 +1,1 @@
+import{_ as t,c as s,a as o,o as a}from"./kLS1Tq6J.js";const c={},n={class:"max-w-7xl mx-auto p-5"};function r(l,e){return a(),s("section",n,e[0]||(e[0]=[o("h1",{class:"flex justify-center text-7xl pt-16"}," Test/ page ",-1)]))}const _=t(c,[["render",r]]);export{_ as default};
