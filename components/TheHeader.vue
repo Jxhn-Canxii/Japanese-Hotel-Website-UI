@@ -8,10 +8,10 @@
       
       <div class="nav-links">
         <NuxtLink to="/" class="nav-link">Home</NuxtLink>
-        <NuxtLink to="/about" class="nav-link">About</NuxtLink>
         <NuxtLink to="/rooms" class="nav-link">Rooms</NuxtLink>
         <NuxtLink to="/dining" class="nav-link">Dining</NuxtLink>
         <NuxtLink to="/gallery" class="nav-link">Gallery</NuxtLink>
+        <NuxtLink to="/about" class="nav-link">About</NuxtLink>
         <NuxtLink to="/booking" class="book-now">Book Now</NuxtLink>
       </div>
 
@@ -24,10 +24,10 @@
 
     <div class="mobile-menu" :class="{ 'open': isMenuOpen }">
       <NuxtLink to="/" class="mobile-link" @click="isMenuOpen = false">Home</NuxtLink>
-      <NuxtLink to="/about" class="mobile-link" @click="isMenuOpen = false">About</NuxtLink>
       <NuxtLink to="/rooms" class="mobile-link" @click="isMenuOpen = false">Rooms</NuxtLink>
       <NuxtLink to="/dining" class="mobile-link" @click="isMenuOpen = false">Dining</NuxtLink>
       <NuxtLink to="/gallery" class="mobile-link" @click="isMenuOpen = false">Gallery</NuxtLink>
+      <NuxtLink to="/about" class="mobile-link" @click="isMenuOpen = false">About</NuxtLink>
       <NuxtLink to="/booking" class="mobile-link book-now" @click="isMenuOpen = false">Book Now</NuxtLink>
     </div>
   </header>
