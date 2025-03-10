@@ -13,10 +13,9 @@ const search = ref({
 export default defineNuxtConfig({
   ssr: false,          // Ensure SSR is enabled explicitly
   // Configure Nuxt to listen on the local network
-  // devServer: {
-  //   host: "10.20.1.69",
-  //   port: 8089
-  // },
+  devServer: {
+    port: 8089
+  },
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
   postcss: {
@@ -59,7 +58,7 @@ export default defineNuxtConfig({
    * * Nuxt 3 Modules
    * Official modules: https://nuxt.com/modules
    */
-   modules: ['@nuxt/content', '@nuxtjs/color-mode', '@vesp/nuxt-fontawesome', '@nuxtjs/tailwindcss', '@pinia/nuxt', '@nuxt/image'],
+   modules: ['@nuxt/ui', '@pinia/nuxt'],
    colorMode: {
     classSuffix: '',
     preference: 'system',

@@ -41,8 +41,6 @@
 </template>
 
 <script setup>
-import TheHeader from '@/components/TheHeader.vue'
-import TheFooter from '@/components/TheFooter.vue'
 import ParallaxSection from '@/components/ParallaxSection.vue'
 
 definePageMeta({
