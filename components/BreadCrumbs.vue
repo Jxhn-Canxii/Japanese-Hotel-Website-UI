@@ -5,7 +5,7 @@
           <router-link to="/cms/dashboard" class="breadcrumb-link">Dashboard</router-link>
           <span class="breadcrumb-separator">/</span>
         </li>
-        <li class="font-bold">{{ page }}</li>
+        <li class="font-medium text-black dark:text-white">{{ page }}</li>
       </ol>
     </nav>
   </template>

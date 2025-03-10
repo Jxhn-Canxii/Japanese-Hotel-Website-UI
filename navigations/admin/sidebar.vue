@@ -1,8 +1,8 @@
 <template>
   <USidebar v-model="isSidebarOpen" class="w-64 shadow-xl text-white shadow-xl">
-    <div class="flex items-center justify-center space-x-2 p-4 mb-4 bg-emerald-600">
+    <div class="flex items-center justify-start space-x-2 p-4 mb-4 bg-emerald-600">
         <UIcon name="i-heroicons-globe-alt" class="w-6 h-6 text-lime-500 space-x-4" />
-        <span class="text-xl font-bold text-white">Admin Panel</span>
+        <span class="text-xl font-bold text-gray-900">Admin Panel</span>
     </div>
     <UVerticalNavigation :links="sidebarLinks"/>
   </USidebar>
