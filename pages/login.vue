@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center items-center min-h-screen p-4">
     <div class="bg-white p-6 rounded-lg shadow-lg w-full h-full max-w-sm">
-      <h1 class="text-3xl font-semibold text-center text-emerald-900 mb-6">
+      <h1 class="text-3xl font-semibold text-center text-slate-900 mb-6">
         Login
       </h1>
 
