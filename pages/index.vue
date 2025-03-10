@@ -155,7 +155,7 @@ const parallaxImage = '@/assets/images/parallax.jpg';
 }
 
 .features {
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   background-color: white;
 }
 

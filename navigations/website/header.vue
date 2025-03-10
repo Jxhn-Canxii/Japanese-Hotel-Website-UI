@@ -7,11 +7,11 @@
       </NuxtLink>
       
       <div class="nav-links">
-        <NuxtLink to="/" class="nav-link">Home</NuxtLink>
-        <NuxtLink to="/rooms" class="nav-link">Rooms</NuxtLink>
-        <NuxtLink to="/dining" class="nav-link">Dining</NuxtLink>
-        <NuxtLink to="/gallery" class="nav-link">Gallery</NuxtLink>
-        <NuxtLink to="/about" class="nav-link">About</NuxtLink>
+        <NuxtLink to="/" class="nav-link" active-class="font-bold border-b border-orange-900">Home</NuxtLink>
+        <NuxtLink to="/rooms" class="nav-link" active-class="font-bold border-b border-orange-900">Rooms</NuxtLink>
+        <NuxtLink to="/dining" class="nav-link" active-class="font-bold border-b border-orange-900">Dining</NuxtLink>
+        <NuxtLink to="/gallery" class="nav-link" active-class="font-bold border-b border-orange-900">Gallery</NuxtLink>
+        <NuxtLink to="/about" class="nav-link" active-class="font-bold border-b border-orange-900">About</NuxtLink>
         <NuxtLink to="/booking" class="book-now">Book Now</NuxtLink>
       </div>
 
@@ -125,11 +125,30 @@ nav {
   color: #333;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 0.9rem;
+  position: relative;
+  padding-bottom: 5px;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
   color: #000;
+}
+
+/* Japanese-inspired underline indicator */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(45deg, #f4a261, #e76f51); /* Soft gradient resembling Japanese ink */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
 }
 
 .book-now {
