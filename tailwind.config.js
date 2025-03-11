@@ -15,7 +15,7 @@ export default {
           'widia-lime': '#957f0b'
       },
       fontFamily: {
-          sans: "Poppins",
+          sans: "San Francisco Bold",
           sfbold: "San Francisco Bold",
           pop: "Poppins Medium",
           poplight: "Poppins Light",

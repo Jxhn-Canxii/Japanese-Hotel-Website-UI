@@ -21,6 +21,7 @@
             v-model="form.username"
             required
             size="md"
+            color="black"
             placeholder="Enter your username">
             <template #trailing>
                     <UButton
@@ -52,6 +53,7 @@
             v-model="form.password"
             required
             size="md"
+            color="black"
             :ui="{ icon: { trailing: { pointer: '' } } }"
             placeholder="Enter your password">
                 <template #trailing>
@@ -72,7 +74,7 @@
           </span>
         </div>
 
-        <UButton color="yellow" type="submit" width="w-full" size="md" class="flex w-full items-center justify-center" variant="solid">Login</UButton>
+        <UButton color="black" type="submit" width="w-full" size="md" class="flex w-full items-center justify-center" variant="solid">Login</UButton>
       </form>
     </div>
   </div>
