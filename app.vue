@@ -11,13 +11,25 @@
 </script>
 
 <style>
+/* Updated page transition for a Japanese theme */
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.4s;
+  transition: transform 0.6s ease, opacity 0.6s ease;
 }
-.page-enter-from,
-.page-leave-to {
+.page-enter-from {
+  transform: translateX(100%);
   opacity: 0;
-  filter: blur(1rem);
+}
+.page-enter-to {
+  transform: translateX(0);
+  opacity: 1;
+}
+.page-leave-from {
+  transform: translateX(0);
+  opacity: 1;
+}
+.page-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
 }
 </style>
