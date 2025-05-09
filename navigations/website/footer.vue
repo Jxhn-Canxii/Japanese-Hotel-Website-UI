@@ -33,6 +33,15 @@
           <p>Email: info@kizumahotel.jp</p>
         </div>
       </div>
+
+      <div class="footer-section">
+        <h4>Affiliate Hotels</h4>
+        <nav class="space-y-1">
+          <a href="https://www.ryokanexample.jp" target="_blank" rel="noopener noreferrer">Ryokan Example</a>
+          <a href="https://www.traditionalinn.jp" target="_blank" rel="noopener noreferrer">Traditional Inn</a>
+          <a href="https://www.modernstay.jp" target="_blank" rel="noopener noreferrer">Modern Stay</a>
+        </nav>
+      </div>
     </div>
 
     <div class="footer-bottom">
