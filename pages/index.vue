@@ -37,6 +37,105 @@
         </div>
       </div>
     </section>
+
+    <!-- Rooms section -->
+    <section class="rooms">
+      <h2 class="section-title">Our Rooms</h2>
+      <div class="room-grid">
+        <div class="room-item">
+          <img src="https://images.unsplash.com/photo-1590490359683-658d3d23f972" alt="Kiku Room" class="room-image" />
+          <h3>菊の間 | Kiku Room</h3>
+          <p>Elegant room with a view of the garden</p>
+          <button class="btn-primary mt-2">View Details</button>
+        </div>
+        <div class="room-item">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427" alt="Ume Room" class="room-image" />
+          <h3>梅の間 | Ume Room</h3>
+          <p>Spacious room with modern amenities</p>
+          <button class="btn-primary mt-2">View Details</button>
+        </div>
+        <div class="room-item">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427" alt="Momo Room" class="room-image" />
+          <h3>桃の間 | Momo Room</h3>
+          <p>Cozy room with traditional decor</p>
+          <button class="btn-primary mt-2">View Details</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery section -->
+    <section class="gallery">
+      <h2 class="section-title">ギャラリー | Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9" alt="Gallery Image 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186" alt="Gallery Image 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186" alt="Gallery Image 3" />
+        </div>
+      </div>
+    </section>
+    <!-- Reviews section -->
+    <section class="reviews">
+      <h2 class="section-title">お客様の声 | Guest Reviews</h2>
+      <div class="review-carousel-wrapper">
+        <button class="carousel-arrow left-arrow" @click="scrollLeft">&#8592;</button>
+        <div class="review-carousel">
+          <div class="review-item">
+            <p class="review-text">"A beautiful experience!"</p>
+            <p class="review-author">- John Doe</p>
+          </div>
+          <div class="review-item">
+            <p class="review-text">"The best hotel in Kyoto!"</p>
+            <p class="review-author">- Jane Smith</p>
+          </div>
+          <div class="review-item">
+            <p class="review-text">"I loved the onsen!"</p>
+            <p class="review-author">- Hiroshi Tanaka</p>
+          </div>
+          <div class="review-item">
+            <p class="review-text">"A beautiful experience!"</p>
+            <p class="review-author">- John Doe</p>
+          </div>
+          <div class="review-item">
+            <p class="review-text">"The best hotel in Kyoto!"</p>
+            <p class="review-author">- Jane Smith</p>
+          </div>
+          <div class="review-item">
+            <p class="review-text">"I loved the onsen!"</p>
+            <p class="review-author">- Hiroshi Tanaka</p>
+          </div>
+          <div class="review-item">
+            <p class="review-text">"A beautiful experience!"</p>
+            <p class="review-author">- John Doe</p>
+          </div>
+          <div class="review-item">
+            <p class="review-text">"The best hotel in Kyoto!"</p>
+            <p class="review-author">- Jane Smith</p>
+          </div>
+          <div class="review-item">
+            <p class="review-text">"I loved the onsen!"</p>
+            <p class="review-author">- Hiroshi Tanaka</p>
+          </div>
+        </div>
+        <button class="carousel-arrow right-arrow" @click="scrollRight">&#8594;</button>
+      </div>
+    </section>
+    <!-- Contact section -->
+    <section class="contact text-center">
+      <h2 class="section-title">お問い合わせ | Contact Us</h2>
+      <p>If you have any questions, feel free to reach out!</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" class="form-input" />
+        <input type="email" placeholder="Your Email" class="form-input" />
+        <textarea placeholder="Your Message" class="form-textarea"></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </section>
+
   </div>
 </template>
 
@@ -48,6 +147,16 @@ definePageMeta({
 });
 
 const parallaxImage = '@/assets/images/parallax.jpg';
+
+const scrollLeft = () => {
+  const carousel = document.querySelector('.review-carousel');
+  carousel.scrollBy({ left: -300, behavior: 'smooth' });
+};
+
+const scrollRight = () => {
+  const carousel = document.querySelector('.review-carousel');
+  carousel.scrollBy({ left: 300, behavior: 'smooth' });
+};
 
 </script>
 
@@ -188,6 +297,158 @@ const parallaxImage = '@/assets/images/parallax.jpg';
 .feature-item p {
   color: #666;
   font-size: 0.9rem;
+}
+
+.rooms {
+  padding: 2rem 2rem;
+  background-color: #f8f8f8;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.room-item {
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.room-item:hover {
+  transform: translateY(-5px);
+}
+
+.room-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 2rem;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gallery {
+  padding: 2rem 2rem;
+  background-color: white;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.contact {
+  padding: 2rem 2rem;
+  background-color:rgb(255, 255, 255);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-input, .form-textarea {
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.reviews {
+  padding: 2rem 2rem;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+/* Updated review-carousel for scrollable carousel */
+.review-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Hide the scrollbar for the review carousel */
+.review-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* Add custom scrollbar styles */
+.review-carousel::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.review-item {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.review-text {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.review-author {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.carousel-arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.carousel-arrow:hover {
+  color: #333;
 }
 
 @media (max-width: 768px) {
