@@ -100,6 +100,7 @@ definePageMeta({
 useHead({
   title: 'Book Your Stay'
 })
+
 const formData = ref({
   checkIn: '',
   checkOut: '',

@@ -5,6 +5,7 @@
       <slot />
     </main>
     <TheFooter />
+    <ChatSupport />
   </div>
 </template>
 
