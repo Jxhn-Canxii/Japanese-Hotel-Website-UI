@@ -61,6 +61,9 @@
           <button class="btn-primary mt-2">View Details</button>
         </div>
       </div>
+      <div class="text-center mt-4">
+        <NuxtLink to="/rooms" class="btn-secondary">View More Rooms</NuxtLink>
+      </div>
     </section>
 
     <!-- Gallery section -->
@@ -76,6 +79,9 @@
         <div class="gallery-item">
           <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186" alt="Gallery Image 3" />
         </div>
+      </div>
+      <div class="text-center mt-4">
+        <NuxtLink to="/gallery" class="btn-secondary">View Full Gallery</NuxtLink>
       </div>
     </section>
     <!-- Reviews section -->
@@ -103,6 +109,22 @@
           <div class="review-item">
             <p class="review-text">"The best hotel in Kyoto!"</p>
             <p class="review-author">- Jane Smith</p>
+          </div>
+          <div class="review-item">
+            <p class="review-text">"I loved the onsen!"</p>
+            <p class="review-author">- Hiroshi Tanaka</p>
+          </div>
+          <div class="review-item">
+            <p class="review-text">"A beautiful experience!"</p>
+            <p class="review-author">- John Doe</p>
+          </div>
+          <div class="review-item">
+            <p class="review-text">"The best hotel in Kyoto!"</p>
+            <p class="review-author">- Jane Smith</p>
+          </div>
+          <div class="review-item">
+            <p class="review-text">"I loved the onsen!"</p>
+            <p class="review-author">- Hiroshi Tanaka</p>
           </div>
           <div class="review-item">
             <p class="review-text">"I loved the onsen!"</p>
