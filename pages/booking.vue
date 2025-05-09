@@ -45,6 +45,14 @@
           <div class="form-group">
             <label for="roomType">お部屋タイプ | Room Type</label>
             <select id="roomType" v-model="formData.roomType" required>
+              <option value="" disabled selected>部屋を選択してください | Select a Room</option>
+              <option value="kiku">菊の間 | Kiku Room</option>
+              <option value="ume">梅の間 | Ume Room</option>
+              <option value="momo">桃の間 | Momo Room</option>
+              <option value="taka">鷹の間 | Taka Room</option>
+              <option value="kame">亀の間 | Kame Room</option>
+              <option value="kiri">桐の間 | Kiri Room</option>
+              <option value="yuki">雪の間 | Yuki Room</option>
               <option value="sakura">桜スイート | Sakura Suite</option>
               <option value="matsu">松の間 | Matsu Room</option>
               <option value="take">竹の間 | Take Room</option>

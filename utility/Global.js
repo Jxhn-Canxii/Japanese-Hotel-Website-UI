@@ -1,6 +1,6 @@
 // In your Nuxt 3 code (e.g., in your store or a component file)
 import { decryptData } from "./AES";
-export const VUE_APP_API_URL = 'https://dianeresidences.com/api/api/';
+export const VUE_APP_API_URL = 'http://10.0.0.162:8096/api/';
 // export const VUE_APP_API_URL =  'http://10.0.0.162:8096/api/';
 // Encryption key
 export const FRIED_CHICKEN = "&8^John$uperDuperCute2023!90degreesCelc1us&";
