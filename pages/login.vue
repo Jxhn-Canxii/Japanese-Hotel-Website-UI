@@ -1,81 +1,74 @@
 <template>
-  <div class="flex justify-center items-center min-h-screen p-4">
-    <div class="bg-white p-6 rounded-lg shadow-lg w-full h-full max-w-sm">
-      <h1 class="text-3xl font-semibold text-center text-slate-900 mb-6">
-        Login
-      </h1>
+  <div class="flex justify-center items-center min-h-screen p-4 bg-gray-100">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full h-full max-w-sm relative">
+      <img
+        src="~/assets/images/parallax.jpg"
+        alt="Kizuma Hotel"
+        class="absolute top-0 left-0 w-full h-32 object-cover rounded-t-lg"
+      />
+      <div class="mt-36">
+        <h1 class="text-3xl font-semibold text-center text-slate-900 mb-6">
+          Welcome to Kizuma Hotel
+        </h1>
 
-      <!-- Display error message -->
-      <div v-if="error" class="bg-red-500 text-white text-sm p-2 mb-4 rounded">
-        {{ error }}
-      </div>
+        <!-- Display error message -->
+        <div v-if="error" class="bg-red-500 text-white text-sm p-2 mb-4 rounded">
+          {{ error }}
+        </div>
 
-      <form @submit.prevent="login" class="">
-        <div class="mb-4">
-          <label
-            for="username"
-            class="block text-sm font-medium text-emerald-900 mb-2"
-            >Username</label
-          >
-           <UInput 
-            v-model="form.username"
-            required
-            size="md"
-            color="black"
-            placeholder="Enter your username">
-            <template #trailing>
-                    <UButton
-                    color="gray"
-                    variant="link"
-                    icon="i-heroicons-user"
-                    :padded="false"
+        <form @submit.prevent="login" class="">
+          <div class="mb-4">
+            <label
+              for="username"
+              class="block text-sm font-medium text-emerald-900 mb-2"
+              >Username</label
+            >
+            <UInput 
+              v-model="form.username"
+              required
+              size="md"
+              color="black"
+              placeholder="Enter your username">
+              <template #trailing>
+                <UButton
+                  color="gray"
+                  variant="link"
+                  icon="i-heroicons-user"
+                  :padded="false"
                 />
-            </template>
-          </UInput>
-        </div>
-        
-        <!-- Password field with eye icon to toggle visibility -->
-        <div class="mb-6 relative">
-          <label
-            for="password"
-            class="block text-sm font-medium text-emerald-900 mb-2"
-            >Password</label
-          >
-          <!-- <input
-            :type="showPassword ? 'text' : 'password'"
-            v-model="form.password"
-            required
-            class="w-full p-2 border border-emerald-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
-            placeholder="Enter your password"
-          /> -->
-          <UInput 
-            :type="showPassword ? 'text' : 'password'"
-            v-model="form.password"
-            required
-            size="md"
-            color="black"
-            :ui="{ icon: { trailing: { pointer: '' } } }"
-            placeholder="Enter your password">
-                <template #trailing>
-                     <UButton
-                        color="gray"
-                        :icon="showPassword ? 'i-heroicons-eye-slash' : 'i-heroicons-eye'"
-                        :padded="false"
-                        @click.prevent="showPassword = !showPassword"
-                    />
-                </template>
-          </UInput>
-          <!-- Eye icon to toggle password visibility -->
-          <span
-            @click="togglePasswordVisibility"
-            class="absolute right-3 top-1/2 transform cursor-pointer"
-          >
-            <font-awesome :icon="showPassword ? faEye : faEyeSlash" class="text-emerald-900 text-xl" />
-          </span>
-        </div>
+              </template>
+            </UInput>
+          </div>
+          
+          <!-- Password field with eye icon to toggle visibility -->
+          <div class="mb-6 relative">
+            <label
+              for="password"
+              class="block text-sm font-medium text-emerald-900 mb-2"
+              >Password</label
+            >
+            <UInput 
+              :type="showPassword ? 'text' : 'password'"
+              v-model="form.password"
+              required
+              size="md"
+              color="black"
+              :ui="{ icon: { trailing: { pointer: '' } } }"
+              placeholder="Enter your password">
+              <template #trailing>
+                <UButton
+                  color="gray"
+                  :icon="showPassword ? 'i-heroicons-eye-slash' : 'i-heroicons-eye'"
+                  :padded="false"
+                  @click.prevent="showPassword = !showPassword"
+                />
+              </template>
+            </UInput>
+          </div>
 
-        <UButton color="black" type="submit" width="w-full" size="md" class="flex w-full items-center justify-center" variant="solid">Login</UButton>
-      </form>
+          <UButton color="black" type="submit" width="w-full" size="md" class="flex w-full items-center justify-center" variant="solid">Login</UButton>
+        </form>
+      </div>
     </div>
   </div>
 </template>
@@ -170,3 +163,14 @@ const preProcess = async (token) => {
   }
 };
 </script>
+
+<style scoped>
+.bg-gray-100 {
+  background-color: #f8f8f8;
+}
+
+img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+</style>
