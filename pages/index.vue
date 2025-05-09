@@ -48,7 +48,7 @@
           <p>Elegant room with a view of the garden</p>
           <button class="btn-primary mt-2">View Details</button>
         </div>
-        <div class="room-item">
+        <div class="room-item mb-4">
           <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427" alt="Ume Room" class="room-image" />
           <h3>梅の間 | Ume Room</h3>
           <p>Spacious room with modern amenities</p>
@@ -69,7 +69,7 @@
     <!-- Gallery section -->
     <section class="gallery">
       <h2 class="section-title">ギャラリー | Gallery</h2>
-      <div class="gallery-grid">
+      <div class="gallery-grid mb-4">
         <div class="gallery-item">
           <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9" alt="Gallery Image 1" />
         </div>
@@ -339,6 +339,7 @@ const scrollRight = () => {
 }
 
 .room-item {
+  background-color: white;
   text-align: center;
   padding: 2rem;
   border: 1px solid #eee;
