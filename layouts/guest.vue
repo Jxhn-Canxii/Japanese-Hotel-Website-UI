@@ -11,6 +11,11 @@
 <script setup>
 import TheHeader from '@/navigations/website/header.vue'
 import TheFooter from '@/navigations/website/footer.vue'
+
+// Ensure dynamic page titles are applied
+useHead({
+  title: useRoute().meta.title
+});
 </script>
 
 <style>

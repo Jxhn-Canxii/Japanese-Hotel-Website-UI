@@ -28,19 +28,18 @@ export default defineNuxtConfig({
   css: ['@/assets/css/main.css'],
   app: {
     head: {
-      title: siteTitle, // App window nav title
-      
+      titleTemplate: '%s - Kizuma Hotel',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'theme-color', content: '#121212' },
-        { name: 'description', content: 'Discover modern living at Diane Residences. We offer beautifully designed spaces that enhance community and comfort in a vibrant environment.' },
-        { name: 'keywords', content: 'Diane Residences, luxury condominiums, real estate, property development, apartments, community living, Cebu' },
-        { name: 'author', content: 'Diane Properties Corporation' },
-        { property: 'og:title', content: 'Diane Residences - Luxury Living in Cebu' },
-        { property: 'og:description', content: 'Explore Diane Residences for exquisite condominiums that blend style, comfort, and a sense of community.' },
-        { property: 'og:image', content: '/images/diane_logo.jpg' },
-        { property: 'og:url', content: 'https://www.dianeresidences.com' },
+        { name: 'description', content: 'Experience the elegance and tradition of Kizuma Hotel in Kyoto, where modern luxury meets Japanese heritage.' },
+        { name: 'keywords', content: 'Kizuma Hotel, Kyoto, Japanese tradition, luxury hotel, onsen, tea ceremony, kaiseki dining, Japanese gardens' },
+        { name: 'author', content: 'Kizuma Hotel' },
+        { property: 'og:title', content: 'Kizuma Hotel - Experience Japanese Elegance' },
+        { property: 'og:description', content: 'Discover the perfect blend of tradition and modern luxury at Kizuma Hotel in Kyoto.' },
+        { property: 'og:image', content: '/images/parallax.jpg' },
+        { property: 'og:url', content: 'https://www.kizumahotel.com' },
         // ...
     ],
     

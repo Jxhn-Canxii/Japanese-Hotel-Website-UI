@@ -67,7 +67,12 @@
 
 <script setup lang="ts">
 definePageMeta({
-  layout: 'guest'
+  layout: 'guest',
+  title: 'About Us'
+});
+
+useHead({
+  title: 'About Us'
 })
 </script>
 

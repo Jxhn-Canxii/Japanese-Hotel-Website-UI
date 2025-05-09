@@ -94,9 +94,12 @@
 
 <script setup lang="ts">
 definePageMeta({
-  layout: 'guest'
+  layout: 'guest',
 })
 
+useHead({
+  title: 'Book Your Stay'
+})
 const formData = ref({
   checkIn: '',
   checkOut: '',

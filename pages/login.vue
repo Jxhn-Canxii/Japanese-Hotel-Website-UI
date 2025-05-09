@@ -94,6 +94,10 @@ definePageMeta({
   layout: 'guest'
 })
 
+useHead({
+  title: 'Login'
+})
+
 const error = ref(""); // Declare error ref to store the error message
 const router = useRouter();
 

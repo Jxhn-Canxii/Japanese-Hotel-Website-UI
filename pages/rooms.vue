@@ -35,7 +35,11 @@
 
 <script setup lang="ts">
 definePageMeta({
-  layout: 'guest'
+  layout: 'guest',
+})
+
+useHead({
+  title: 'Our Rooms'
 })
 
 const rooms = ref([

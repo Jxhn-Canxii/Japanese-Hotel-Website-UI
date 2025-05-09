@@ -168,6 +168,10 @@ definePageMeta({
   layout: 'guest',
 });
 
+useHead({
+  title: 'Welcome'
+})
+
 const parallaxImage = '@/assets/images/parallax.jpg';
 
 const scrollLeft = () => {

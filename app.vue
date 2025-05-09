@@ -1,35 +1,42 @@
 <template>
   <ClientOnly>
     <NuxtLayout>
-      <NuxtPage />
+      <template #default>
+        <Loader v-if="isLoading" />
+        <NuxtPage v-else />
+      </template>
     </NuxtLayout>
   </ClientOnly>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import Loader from '@/components/Loader.vue';
 
+const isLoading = ref(false);
+const router = useRouter();
+
+router.beforeEach((to, from, next) => {
+  isLoading.value = true;
+  next();
+});
+
+router.afterEach(() => {
+  setTimeout(() => {
+    isLoading.value = false;
+  }, 500); // Adjust delay as needed
+});
 </script>
 
 <style>
-/* Updated page transition for a Japanese theme */
 .page-enter-active,
 .page-leave-active {
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition: all 0.4s;
 }
-.page-enter-from {
-  transform: translateX(100%);
-  opacity: 0;
-}
-.page-enter-to {
-  transform: translateX(0);
-  opacity: 1;
-}
-.page-leave-from {
-  transform: translateX(0);
-  opacity: 1;
-}
+.page-enter-from,
 .page-leave-to {
-  transform: translateX(-100%);
   opacity: 0;
+  filter: blur(1rem);
 }
 </style>

@@ -31,7 +31,11 @@
 
 <script setup lang="ts">
 definePageMeta({
-  layout: 'guest'
+  layout: 'guest',
+})
+
+useHead({
+  title: 'Gallery'
 })
 
 const images = ref([
