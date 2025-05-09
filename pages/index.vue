@@ -165,7 +165,7 @@
 import ParallaxSection from '@/components/ParallaxSection.vue'
 
 definePageMeta({
-  layout: 'guest'
+  layout: 'guest',
 });
 
 const parallaxImage = '@/assets/images/parallax.jpg';
