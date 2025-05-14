@@ -1,15 +1,26 @@
 <template>
   <div class="fixed bottom-4 right-4 z-50">
-    <button
-      class="bg-pink-500 text-white p-4 rounded-full shadow-lg hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-300 flex items-center justify-center"
-      @mouseenter="isMouseOver = true"
-      @mouseleave="isMouseOver = false"
-      @click="toggleChat"
-    >
-      <span v-if="!isMouseOver" class="text-2xl">💌</span>
-      <span v-else class="ml-2 font-semibold">お話ししましょう | Chat</span>
-    </button>
+    <div class="relative">
+      <!-- Glowing Ring -->
+      <div class="absolute inset-0 rounded-full animate-glow-ring pointer-events-none"></div>
 
+      <!-- Chat Button -->
+      <button
+        class="relative z-10 bg-pink-500 text-white p-4 rounded-full shadow-lg transition-all duration-300 ease-in-out 
+               hover:bg-gradient-to-r hover:from-pink-500 hover:via-pink-400 hover:to-fuchsia-500 
+               hover:shadow-pink-400/50 hover:shadow-lg 
+               focus:outline-none focus:ring-2 focus:ring-pink-300 
+               flex items-center justify-center"
+        @mouseenter="isMouseOver = true"
+        @mouseleave="isMouseOver = false"
+        @click="toggleChat"
+      >
+        <span v-if="!isMouseOver" class="text-2xl">💌</span>
+        <span v-else class="ml-2 font-semibold">お話ししましょう | Chat</span>
+      </button>
+    </div>
+
+    <!-- Chat Box -->
     <div
       v-if="isChatOpen"
       class="absolute bottom-16 right-0 w-80 bg-white shadow-lg rounded-lg p-4 border border-gray-200"
@@ -73,4 +84,18 @@ const toggleChat = () => {
   max-width: 75%;
   word-wrap: break-word;
 }
+
+@keyframes glow-ring {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.0); /* transparent */
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(236, 72, 153, 0.4); /* glowing pink */
+  }
+}
+
+.animate-glow-ring {
+  animation: glow-ring 2s infinite;
+}
+
 </style>
